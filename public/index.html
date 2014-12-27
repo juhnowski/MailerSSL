@@ -1,0 +1,951 @@
+<html>
+    <head>
+        <title>Анкета</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<!--
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+!-->
+  <style type="text/css" scoped>
+	.highlite {
+    	padding: 9px 14px;
+	    margin-bottom: 14px;
+    	background-color: #f7f7f9;
+	    border: 1px solid #e1e1e8;
+    	border-radius: 4px;
+	}
+  </style>
+
+</head>
+    <body>
+        <div>
+            <h1 style="text-align: center">Анкета заемщика-физического лица</h1>
+            <h6 style="text-align: center">Анкета заполняется клиентом для дальнейшего сотрудничества</h6>
+            <h6 style="text-align: center">с ИП Окружной А.Б.</h6>
+        </div>
+        <form action="send" method="post">
+            <div class="row">
+                <div class="col-md-12"><h3 class="highlite">ЗАПРАШИВАЕМЫЙ ЗАЙМ</h3></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><h5>Запрашиваемая сумма займа (руб.)</h5></div>
+                <div class="col-md-8"><input name="zsum" id="zsum" type="text" class="form-control" placeholder="2000"></div>
+            </div>    
+            <div class="row">
+                <div class="col-md-4"><h5>Цель займа</h5></div>
+                <div class="col-md-8"><input id="zaim" name="zaim" type="text" class="form-control" placeholder="до зарплаты"></div>
+            </div>    
+            <div class="row">
+                <div class="col-md-4"><h5>Срок займа</h5></div>
+                <div class="col-md-2"><input type = "radio"
+                                                name = "zDays"
+                                                id = "day7"
+                                                value = "7"
+                                                checked = "checked" />
+                                        <label for = "day7"> - 7 дней</label>
+                </div>
+                <div class="col-md-2">
+                                        <input type = "radio"
+                                                name = "zDays"
+                                                id = "day14"
+                                                value = "14" />
+                                        <label for = "day14"> - 14 дней</label>
+                </div>
+                <div class="col-md-2">
+                                        <input type = "radio"
+                                                name = "zDays"
+                                                id = "dayOther"
+                                                value = "0" />
+                                        <label for = "dayOther"> - другое</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><h3 class="highlite">ПЕРСОНАЛЬНЫЕ ДАННЫЕ ЗАЕМЩИКА</h3></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><h5>Фамилия Имя Отчество</h5></div>
+                <div class="col-md-8"><input id="fio" name="fio" type="text" class="form-control"></div>
+            </div>    
+            <div class="row">
+                <div class="col-md-4"><h5>Дата рождения</h5></div>
+                <div class="col-md-8"><input id="birthdate" name="birthdate" type="date" class="form-control"></div>
+            </div>    
+            <div class="row">
+                <div class="col-md-4"><h5>Место рождения</h5></div>
+                <div class="col-md-8"><input id="birthplace" name="birthplace" type="text" class="form-control"></div>
+            </div>    
+            <div class="row">
+                <div class="col-md-4"><h5>Гражданство</h5></div>
+                <div class="col-md-8"><input id="citizen" name="citizen" type="text" class="form-control" placeholder="РФ"></div>
+            </div>    
+            <div class="row">
+                <div class="col-md-2"><h5>Образование</h5></div>
+                <div class="col-md-2">
+                    <input type = "radio"
+                       name = "educ"
+                       id = "srednee"
+                       value = "1"
+                       checked = "checked" />
+                    <label for = "srednee"> - среднее</label>
+                </div>
+                <div class="col-md-2">
+                    <input type = "radio"
+                        name = "educ"
+                        id = "visshee"
+                        value = "2" />
+                    <label for = "visshee"> - высшее</label>
+                </div>
+                <div class="col-md-3">
+                    <input type = "radio"
+                        name = "educ"
+                        id = "nezakvisshee"
+                        value = "3" />
+                    <label for = "nezakvisshee"> - незаконченное высшее</label>                                                                                                
+                </div>
+                <div class="col-md-3">
+                    <input type = "radio"
+                        name = "educ"
+                        id = "boleevisshee"
+                        value = "4" />
+                    <label for = "boleevisshee"> - два и более высших / ученая степень</label>                                                                                                                                                
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Имеете ли вы водительские права?</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "drivelic"
+                        id = "drivelicyes"
+                        value = "0" />
+                    <label for = "drivelicyes">-да</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "drivelic"
+                        id = "drivelicno"
+                        value = "1" />
+                    <label for = "drivelicno">-нет</label>     
+                </div>
+            </div>    
+            <div class="row">
+                <div  class="col-md-2">
+                    <h5>Паспорт</h5>
+                </div>
+                <div  class="col-md-1">
+                    <h5>Серия</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="pasportser" name="pasportser" type="text" class="form-control">
+                </div>
+                <div  class="col-md-1">
+                    <h5>Номер</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="pasportnum" name="pasportnum" type="text" class="form-control">
+                </div>
+                <div  class="col-md-2">
+                    <h5>Дата выдачи</h5>
+                </div>               
+                <div class="col-md-2">
+                    <input id="pasportdate" name="pasportdate" type="date" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-2 col-md-offset-2">
+                    <h5>Кем выдан</h5>
+                </div>                
+                <div  class="col-md-8">
+                    <input id="pasportkem" name="pasportkem" type="text" class="form-control">
+                </div>                
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Адрес постоянной регистрации</h5>
+                </div>                
+                <div  class="col-md-8">
+                    <input id="addresspostreg" name="addresspostreg" type="text" class="form-control">
+                </div>                
+            </div>
+            <div class="row">
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "homeownerstate"
+                        id = "homeowner"
+                        value = "0" />
+                    <label for = "homeowner">-Собственное жилье</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "homeownerstate"
+                        id = "homesoc"
+                        value = "1" />
+                    <label for = "homesoc">-Социальный найм</label>     
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "homeownerstate"
+                        id = "homecom"
+                        value = "2" />
+                    <label for = "homecom">-Коммерческий найм</label>     
+                </div>                
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "homeownerstate"
+                        id = "homerod"
+                        value = "3" />
+                    <label for = "homerod">-У родственников</label>     
+                </div>                
+                <div  class="col-md-1">
+                    <input type = "radio"
+                        name = "homeownerstate"
+                        id = "homeother"
+                        value = "4" />
+                    <label for = "homeother">-Иное:</label>     
+                </div>
+                <div  class="col-md-3">
+                    <input id="homeothertext" name="homeothertext" type="text" class="form-control">
+                </div>                
+            </div>    
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Адрес фактического проживания</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="addressfact" name="addressfact" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "fhomeownerstate"
+                        id = "fhomeowner"
+                        value = "0" />
+                    <label for = "fhomeowner">-Собственное жилье</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "fhomeownerstate"
+                        id = "fhomesoc"
+                        value = "1" />
+                    <label for = "fhomesoc">-Социальный найм</label>     
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "fhomeownerstate"
+                        id = "fhomecom"
+                        value = "2" />
+                    <label for = "fhomecom">-Коммерческий найм</label>     
+                </div>                
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "fhomeownerstate"
+                        id = "fhomerod"
+                        value = "3" />
+                    <label for = "fhomerod">-У родственников</label>     
+                </div>                
+                <div  class="col-md-1">
+                    <input type = "radio"
+                        name = "fhomeownerstate"
+                        id = "fhomeother"
+                        value = "4" />
+                    <label for = "fhomeother">-Иное:</label>     
+                </div>
+                <div  class="col-md-3">
+                    <input id="fhomeothertext" name="fhomeothertext" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-3">
+                    <h5>Домашний телефон</h5>
+                </div>
+                <div  class="col-md-3">
+                    <input id="homephone" name="homephone" type="text" class="form-control">
+                </div>
+                <div  class="col-md-3">
+                    <h5>Мобильный телефон</h5>
+                </div>
+                <div  class="col-md-3">
+                    <input id="cellphone" name="cellphone" type="text" class="form-control">
+                </div>                
+            </div>
+            <div class="row">
+                <div  class="col-md-3">
+                    <h5>Рабочий телефон</h5>
+                </div>
+                <div  class="col-md-3">
+                    <input id="workphone" name="workphone" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="highlite">ДАННЫЕ О СЕМЬЕ</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Семейное положение</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "famstate"
+                        id = "zhenat"
+                        value = "0" />
+                    <label for = "zhenat">-женат/замужем</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "famstate"
+                        id = "holost"
+                        value = "1" />
+                    <label for = "holost">-холост/не замужем</label>     
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "famstate"
+                        id = "razveden"
+                        value = "2" />
+                    <label for = "razveden">-разведен(а)</label>     
+                </div>                
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "famstate"
+                        id = "vdov"
+                        value = "3" />
+                    <label for = "vdov">-вдовец/вдова</label>     
+                </div>                
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>ФИО супруга(и), дата рождения, контактный телефон</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="suprfio" name="suprfio" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Место работы супруга(и), должность</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="suprwork" name="suprwork" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Состав семьи, количество</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="famcount" name="famcount" type="number" class="form-control">
+                </div>
+                <div  class="col-md-4">
+                    <h5>Из них детей</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="childcount" name="childcount" type="number" class="form-control">
+                </div>                
+            </div>            
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>ФИО родителей, место работы,должность,контактный телефон</h5>
+                </div>
+                <div  class="col-md-1">
+                    <h5>Мать:</h5>
+                </div>
+                <div  class="col-md-4">
+                    <input id="mather" name="mather" type="text" class="form-control">
+                </div>                
+                <div  class="col-md-1">
+                    <h5>Тел.:</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="matherphone" name="matherphone" type="text" class="form-control">
+                </div>                
+            </div>
+            <div class="row">
+                <div  class="col-md-1 col-md-offset-4">
+                    <h5>Отец:</h5>
+                </div>
+                <div  class="col-md-4">
+                    <input id="father" name="father" type="text" class="form-control">
+                </div>                
+                <div  class="col-md-1">
+                    <h5>Тел.:</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="fatherphone" name="fatherphone" type="text" class="form-control">
+                </div>                
+            </div>  
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="highlite">КОНТАКТНАЯ ИНФОРМАЦИЯ ЛИЦА ДЛЯ СРОЧНОЙ СВЯЗИ С ВАМИ</h3>
+                </div>
+            </div>
+            <div class="row">
+                    <div  class="col-md-4">
+                        <h5>1.Фамилия Имя Отчество</h5>
+                    </div>
+                    <div  class="col-md-8">
+                        <input id="contact1" name="contact1" type="text" class="form-control">
+                    </div>
+            </div>
+            <div class="row">
+                    <div  class="col-md-4">
+                        <h5>Степень родства</h5>
+                    </div>
+                    <div  class="col-md-8">
+                        <input id="contact1rod" name="contact1rod" type="text" class="form-control">
+                    </div>
+            </div>
+            <div class="row">
+                    <div  class="col-md-4">
+                        <h5>Контактный телефон</h5>
+                    </div>
+                    <div  class="col-md-8">
+                        <input id="contact1cell" name="contact1cell" type="text" class="form-control">
+                    </div>
+            </div>
+            <div class="row">
+                    <div  class="col-md-4">
+                        <h5>2.Фамилия Имя Отчество</h5>
+                    </div>
+                    <div  class="col-md-8">
+                        <input id="contact2" name="contact2" type="text" class="form-control">
+                    </div>
+            </div>
+            <div class="row">
+                    <div  class="col-md-4">
+                        <h5>Степень родства</h5>
+                    </div>
+                    <div  class="col-md-8">
+                        <input id="contact2rod" name="contact2rod" type="text" class="form-control">
+                    </div>
+            </div>
+            <div class="row">
+                    <div  class="col-md-4">
+                        <h5>Контактный телефон</h5>
+                    </div>
+                    <div  class="col-md-8">
+                        <input id="contact2cell" name="contact2cell"  type="text" class="form-control">
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="highlite">ДАННЫЕ О РАБОТЕ</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Тип занятости</h5>
+                </div>
+                <div  class="col-md-4">
+                    <input type = "radio"
+                        name = "workstate"
+                        id = "rabota"
+                        value = "0" />
+                    <label for = "rabota">-работа по найму/служба</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "workstate"
+                        id = "domohoz"
+                        value = "1" />
+                    <label for = "domohoz">-домохозяйка</label>     
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "workstate"
+                        id = "pens"
+                        value = "2" />
+                    <label for = "pens">-пенсионер</label>     
+                </div>                                
+            </div>
+            <div class="row">
+                <div  class="col-md-4 col-md-offset-4">
+                    <input type = "radio"
+                        name = "workstate"
+                        id = "sobstvdelo"
+                        value = "3" />
+                    <label for = "sobstvdelo">-собственное дело</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "workstate"
+                        id = "student"
+                        value = "4" />
+                    <label for = "student">-студент</label>     
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "workstate"
+                        id = "bezrab"
+                        value = "5" />
+                    <label for = "bezrab">-безработный</label>     
+                </div>                                
+            </div>            
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Название организации/вид деятельности</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="firmname" name="firmname" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Адрес организации</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="firmaddress" name="firmaddress" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Телефон организации/рабочий мобильный телефон</h5>
+                </div>
+                <div  class="col-md-4">
+                    <input id="firmphone" name="firmphone" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Должность</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="dolzhnost" name="dolzhnost" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Стаж по текущему месту работы</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="stazh" name="stazh" type="text" class="form-control">
+                </div>
+                <div  class="col-md-4">
+                    <h5>Общий трудовой стаж (лет)</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="stazhall" name="stazhall" type="number" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="highlite">СРЕДНЕМЕСЯЧНЫЕ ДОХОДЫ И РАСХОДЫ</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="highlite">Среднемесячные доходы за последние 3 месяца:</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>По основному месту работы</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="poosnmesturaboty" name="poosnmesturaboty" type="number" class="form-control">
+                </div>
+                <div  class="col-md-4">
+                    <h5>Сдача в аренду недвижимости</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="arenda" name="arenda" type="number" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>По совместительству</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="posovmestit" name="posovmestit" type="number" class="form-control">
+                </div>
+                <div  class="col-md-4">
+                    <h5>Проценты,дивиденты</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="procdiv" name="procdiv" type="number" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Пенсия</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="pensiya" name="pensiya" type="number" class="form-control">
+                </div>
+                <div  class="col-md-4">
+                    <h5>Прочие (указать какие)</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input id="proch" name="proch" type="text" class="form-control">
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Доход других членов семьи (указать какие)</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="dohdrugihchlenovsem" name="dohdrugihchlenovsem" type="number" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="highlite">Среднемесячные расходы за последние 3 месяца:</h5>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div  class="col-md-3">
+                    <h5>Коммунальные платежи</h5>
+                </div>
+                <div  class="col-md-3">
+                    <input id="commplat" name="commplat" type="number" class="form-control">
+                </div>
+                <div  class="col-md-3">
+                    <h5>Питание</h5>
+                </div>
+                <div  class="col-md-3">
+                    <input id="pitanie" name="pitanie" type="number" class="form-control">
+                </div>                
+            </div>
+            <div class="row">
+                <div  class="col-md-3">
+                    <h5>Кредиты</h5>
+                </div>
+                <div  class="col-md-3">
+                    <input id="credits" name="credits" type="number" class="form-control">
+                </div>
+                <div  class="col-md-3">
+                    <h5>Обучение</h5>
+                </div>
+                <div  class="col-md-3">
+                    <input id="obuchenie" name="obuchenie" type="number" class="form-control">
+                </div>                
+            </div>            
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="highlite">ИНФОРМАЦИЯ О НАЛИЧИИ СОБСТВЕННОСТИ И ДРУГИХ АКТИВОВ</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Недвижимость(дом,квартира,комната,дача,земля), указать адрес</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="nedvizhimost" name="nedvizhimost" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Транспорт (модель, год выпуска)</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="transp" name="transp" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Средства на банковских счетах</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="srbank" name="srbank" type="text" class="form-control">
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Другие ликвидные активы</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="likvact" name="likvact" type="text" class="form-control">
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="highlite">ИНФОРМАЦИЯ О НАЛИЧИИ ОБЯЗАТЕЛЬСТВ</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Действующие кредиты (кредитор,размер,срок,дата получения,размер платежа)</h5>
+                </div>
+                <div  class="col-md-8">
+                    <input id="deystvcred" name="deystvcred" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Алименты</h5>
+                </div>
+                <div  class="col-md-4">
+                    <input type = "radio"
+                        name = "aliment"
+                        id = "alimentno"
+                        value = "0" />
+                    <label for = "alimentno">-нет</label>
+                </div>
+                <div  class="col-md-4">
+                    <input type = "radio"
+                        name = "aliment"
+                        id = "alimentyes"
+                        value = "1" />
+                    <label for = "alimentyes">-есть в сумме</label>     
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Удержание по решению суда</h5>
+                </div>
+                <div  class="col-md-4">
+                    <input type = "radio"
+                        name = "sud"
+                        id = "sudno"
+                        value = "0" />
+                    <label for = "sudno">-нет</label>
+                </div>
+                <div  class="col-md-4">
+                    <input type = "radio"
+                        name = "sud"
+                        id = "sudyes"
+                        value = "1" />
+                    <label for = "sudyes">-есть в сумме</label>     
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-4">
+                    <h5>Прочие выплаты</h5>
+                </div>
+                <div  class="col-md-4">
+                    <input type = "radio"
+                        name = "prochvipl"
+                        id = "prochviplno"
+                        value = "0" />
+                    <label for = "prochviplno">-нет</label>
+                </div>
+                <div  class="col-md-4">
+                    <input type = "radio"
+                        name = "prochvipl"
+                        id = "prochviplyes"
+                        value = "1" />
+                    <label for = "prochviplyes">-есть в сумме</label>     
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="highlite">ДРУГИЕ СВЕДЕНИЯ</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Имеются ли решения суда, которые Вы не исполнили?</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "reshsud"
+                        id = "reshsudno"
+                        value = "0" />
+                    <label for = "reshsudno">-нет</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "reshsud"
+                        id = "reshsudyes"
+                        value = "1" />
+                    <label for = "reshsudyes">-да</label>     
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Находитесь ли Вы под судом или следствием?</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "podsudom"
+                        id = "podsudomno"
+                        value = "0" />
+                    <label for = "podsudomno">-нет</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "podsudom"
+                        id = "podsudomyes"
+                        value = "1" />
+                    <label for = "podsudomyes">-да</label>     
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Предъявлены ли к Вам иски в порядке гражданского судопроизводства?</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "grisk"
+                        id = "griskno"
+                        value = "0" />
+                    <label for = "griskno">-нет</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "grisk"
+                        id = "griskyes"
+                        value = "1" />
+                    <label for = "griskyes">-да</label>     
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Привлекались ли Вы к уголовной ответственности?</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "ugotvet"
+                        id = "ugotvetno"
+                        value = "0" />
+                    <label for = "ugotvetno">-нет</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "ugotvet"
+                        id = "ugotvetyes"
+                        value = "1" />
+                    <label for = "ugotvetyes">-да</label>     
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Существуют ли решения суда об ограничении Вашей дееспособности?</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "ogrdeesp"
+                        id = "ogrdeespno"
+                        value = "0" />
+                    <label for = "ogrdeespno">-нет</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "ogrdeesp"
+                        id = "ogrdeespyes"
+                        value = "1" />
+                    <label for = "ogrdeespyes">-да</label>     
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Имеются ли у Вас просроченные кредиты?</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "credprosroch"
+                        id = "credprosrochno"
+                        value = "0" />
+                    <label for = "credprosrochno">-нет</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "credprosroch"
+                        id = "credprosrochyes"
+                        value = "1" />
+                    <label for = "credprosrochyes">-да</label>     
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Являетесь ли Вы инвалидом I или II группы?</h5>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "invalid"
+                        id = "invalidno"
+                        value = "0" />
+                    <label for = "invalidno">-нет</label>
+                </div>
+                <div  class="col-md-2">
+                    <input type = "radio"
+                        name = "invalid"
+                        id = "invalidyes"
+                        value = "1" />
+                    <label for = "invalidyes">-да</label>     
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-8">
+                    <h5>Если Вы ответили "Да" на любой из вышеперечисленных вопросов, предоставьте дополнительную информацию:</h5>
+                </div>
+                <div  class="col-md-4">
+                    <input id="dopinfo" name="dopinfo" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="highlite">КАК ВЫ УЗНАЛИ ПРО НАС?</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-12">
+                    <input id="pronas" name="pronas" type="text" class="form-control">
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-12">
+                    <h5>Настоящим подтверждаю достоверность сведений, предоставленных в настоящей анкете</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-12">                
+                    <input id="fiopodpis" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div  class="col-md-12">
+                    <h6 style="text-align: center">(подпись, Ф.И.О.)</h6>
+                </div>
+            </div>            
+            <div class="row">
+                <div  class="col-md-12">
+                    "____"_________________________201__г.
+                </div>
+            </div>            
+<br><br><br><br>           
+            <div class="row">
+                <div  class="col-md-12">
+Подписав настоящую анкету, лицо ее подписавшее свободно, 
+своей волей и в своем интересе дает свое разрешение на обработку
+со стороны ИП Окружной А.Б. персональных данных, представленных в настоящей анкете
+, в соответствии со ст.9 Федерального закона от 27.07.2006 № 152-ФЗ "О персональных данных",
+предоставляю согласие на получение кредитных отчетов из бюро кредитных историй в соответствии
+со ст.6 Федерального закона №218-ФЗ от 30.12.2004 г. "О кредитных историях".
+                </div>
+            </div>      
+<br>
+            <div class="row">
+                <div  class="col-md-2">
+                    <strong>Подпись</strong>
+                </div>
+                <div  class="col-md-2 col-md-offset-5">
+                    <input id="empty1" type="text" class="form-control">
+                </div>
+                <div  class="col-md-2 col-md-offset-1">
+                    <input id="empty2" type="text" class="form-control">
+                </div>                
+            </div>
+<br>            
+            <div class="row">
+                <div  class="col-md-4">
+                	<button type="submit" class="btn btn-primary" value="Submit">
+                		<span class="glyphicon glyphicon-cloud-upload"></span> Отправить на рассмотрение
+                	</button>
+				</div>            	
+			</div>	            
+        </form>
+        
+    </body>
+</html>
